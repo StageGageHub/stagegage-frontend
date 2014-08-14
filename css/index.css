@@ -1,0 +1,224 @@
+/* We'll define a global font */
+@font-face {
+    font-family: pacifica;
+    src: url(../fonts/pacifica-condensed-regular.ttf);
+}
+
+body {
+  background-color: rgb(244, 244, 244);
+  font: 300 1.25em/1.38 pacifica;
+  color: rgb(0, 0, 0);
+}
+
+.center_tile {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 6;
+  width: 66.4166666666%;
+  height: 152px;
+  margin: 30px 0 0 16.8307291666%;
+  border: 1px solid rgb(0, 255, 209);
+  background-color: rgb(60, 60, 60);
+}
+
+.menu_bg {
+  position: relative;
+  float: left;
+  z-index: 11;
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  border-bottom: 1px solid rgb(0, 255, 209);
+  background-color: rgb(255, 255, 255);
+}
+
+.festival_select_tile {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 5;
+  width: 32.3333333333%;
+  height: 246px;
+  margin: 30px 0 0 16.8307291666%;
+  border: 1px solid rgb(0, 255, 209);
+  background-color: rgb(255, 255, 255);
+}
+
+.festival_select_tile .text {
+  width: 53.6755181347%;
+  min-height: 60px;
+  margin: 23px 0 0 4.4041499999%;
+  font-size: 0.95em;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.full_rank_tile {
+  position: relative;
+  float: left;
+  z-index: 2;
+  width: 32.3333333333%;
+  height: 246px;
+  margin: 30px 0 0 1.6354166666%;
+  border: 1px solid rgb(0, 255, 209);
+  background-color: rgb(255, 255, 255);
+}
+
+.full_rank_tile .text {
+  width: 75.6476683937%;
+  min-height: 60px;
+  margin: 9px 0 0 15.90431%;
+  font-size: 1.05em;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0.0833333333%;
+  z-index: 15;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.menu:hover {
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -o-transition: 2s ease;
+  -ms-transition: 2s ease;
+  transition: 2s ease;
+}
+
+.next_fesitval_tile {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 66.4166666666%;
+  height: 273px;
+  margin-left: 16.8307291666%;
+  border: 1px solid rgb(0, 255, 209);
+  background-color: rgb(255, 255, 255);
+}
+
+.next_fesitval_tile .text {
+  width: 100.251572327%;
+  min-height: 75px;
+  margin: -1px 0 0 -0.1257900001%;
+  background-color: rgb(0, 255, 209);
+  font-size: 2.75em;
+  font-weight: 200;
+  text-indent: 15px;
+  color: rgb(255, 255, 255);
+}
+
+.quote {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: 80%;
+  min-height: 41px;
+  margin: 128px 0 0 10%;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.text {
+  float: left;
+  line-height: 1.38;
+}
+
+.title {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 10;
+  width: 80%;
+  min-height: 41px;
+  margin: -94px 0 0 10%;
+  font-size: 2em;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+._button {
+  display: block;
+  float: left;
+  border-radius: 3px;
+  text-align: center;
+}
+
+._input {
+  display: block;
+  float: left;
+  clear: both;
+  width: 72.7979274611%;
+  height: 35px;
+  margin: 42px 0 0 23.67633%;
+  padding: 0 10px;
+  border: 1px solid rgb(0, 255, 209);
+  background-color: rgb(242, 242, 242);
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+}
+
+.full_rank_tile ._button {
+  clear: both;
+  width: 95.8549222797%;
+  height: 158px;
+  margin: 7px 0 0 1.91467%;
+  border: 8px dashed rgb(160, 255, 237);
+  background-color: rgb(0, 255, 209);
+  font-size: 3.7em;
+  font-weight: 200;
+  line-height: 0.88;
+  letter-spacing: -2px;
+  word-spacing: 15px;
+  color: rgb(255, 255, 255);
+}
+
+.menu ._button {
+  position: relative;
+  width: 12%;
+  height: 50px;
+  margin-top: -50px;
+  border-bottom: 1px solid rgb(0, 255, 209);
+  font-size: 1em;
+  line-height: 1.38;
+  color: rgb(54, 61, 63);
+  -webkit-transition: .1s ease;
+  -moz-transition: .1s ease;
+  -o-transition: .1s ease;
+  -ms-transition: .1s ease;
+  transition: .1s ease;
+}
+
+.menu ._button:hover {
+  border-bottom-width: 7px;
+}
+
+.menu .home-button {
+  clear: both;
+  z-index: 12;
+  margin-left: 10%;
+}
+
+
+.menu .rankings-button {
+  z-index: 13;
+  margin-left: 23.59896%;
+}
+
+.menu .about-us-button {
+  z-index: 14;
+  margin-left: 37.1992199999%;
+}

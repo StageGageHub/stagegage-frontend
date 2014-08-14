@@ -1,0 +1,94 @@
+body {
+  background-color: rgb(244, 244, 244);
+  font: 300 1.25em/1.38 Raleway;
+  color: rgb(54, 61, 63);
+}
+
+.element {
+  position: relative;
+  float: left;
+  z-index: 0;
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  border-bottom: 1px solid rgb(0, 255, 209);
+  background-color: rgb(255, 255, 255);
+}
+
+.menu {
+  float: left;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+}
+
+.menu:hover {
+  position: static;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -o-transition: 2s ease;
+  -ms-transition: 2s ease;
+  transition: 2s ease;
+}
+
+._button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 12%;
+  height: 50px;
+  margin-top: -50px;
+  border-bottom: 1px solid rgb(0, 255, 209);
+  border-radius: 3px;
+  font-size: 1em;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(54, 61, 63);
+}
+
+._button:hover {
+  border-bottom-width: 7px;
+}
+
+.menu ._button-1 {
+  clear: both;
+  z-index: 1;
+  margin-left: 10%;
+  -webkit-transition: .1s ease;
+  -moz-transition: .1s ease;
+  -o-transition: .1s ease;
+  -ms-transition: .1s ease;
+  transition: .1s ease;
+}
+
+.menu ._button-1:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.menu ._button-2 {
+  z-index: 2;
+  margin-left: 23.59896%;
+  -webkit-transition: .1s ease;
+  -moz-transition: .1s ease;
+  -o-transition: .1s ease;
+  -ms-transition: .1s ease;
+  transition: .1s ease;
+}
+
+.menu ._button-3 {
+  z-index: 3;
+  margin-left: 37.1992199999%;
+  -webkit-transition: .05s ease;
+  -moz-transition: .05s ease;
+  -o-transition: .05s ease;
+  -ms-transition: .05s ease;
+  transition: .05s ease;
+}
+
+.menu ._button-3:hover {
+  -webkit-transition: .1s ease;
+  -moz-transition: .1s ease;
+  -o-transition: .1s ease;
+  -ms-transition: .1s ease;
+  transition: .1s ease;
+}
