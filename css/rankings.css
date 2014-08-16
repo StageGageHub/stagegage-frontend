@@ -1,13 +1,19 @@
-body {
-  background-color: rgb(255, 255, 255);
-  font: 300 1.25em/1.38 Raleway;
-  color: rgb(54, 61, 63);
+/* We'll define a global font */
+@font-face {
+    font-family: pacifica;
+    src: url(../fonts/pacifica-condensed-regular.ttf);
 }
 
-.element {
+body {
+  background-color: rgb(244, 244, 244);
+  font: 300 1.25em/1.38 pacifica;
+  color: rgb(0, 0, 0);
+}
+
+.menu_bg {
   position: relative;
   float: left;
-  z-index: 0;
+  z-index: 11;
   width: 100%;
   height: 50px;
   min-height: 50px;
@@ -16,79 +22,265 @@ body {
 }
 
 .menu {
-  float: left;
+  position: fixed;
+  top: 0;
+  left: 0.0833333333%;
+  z-index: 15;
   width: 100%;
   height: 50px;
   background-color: rgb(255, 255, 255);
 }
 
-.menu:hover {
-  position: static;
-  -webkit-transition: 2s ease;
-  -moz-transition: 2s ease;
-  -o-transition: 2s ease;
-  -ms-transition: 2s ease;
-  transition: 2s ease;
+.title_container {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 100%;
+  height: 130px;
+  margin-top: 50px;
+  background-color: rgb(0, 255, 209);
 }
+
+.title_container .title {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 10;
+  width: 100%;
+  height: 0px;
+  margin: 10px 0 0 0%;
+  font-size: 2em;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.title_container .quote {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: 80%;
+  margin: 50px 10% 0px 10%;
+  font-size: .95em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.filters_container {
+  position: fixed;
+  float: left;
+  z-index: 10;
+  width: 250px;
+  height: 273px;
+  margin-left: 10px;
+  margin-top: 190px;
+  border: 1px solid rgb(0, 255, 209);
+  background-color: rgb(255, 255, 255);
+}
+
+.filters_container .text {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: 80%;
+  margin: 5px 10% 0px 5px;
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.filters_container .festival_filter {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 100%;
+  height: 180px;
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.filters_container .festival_filter .text {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: 80%;
+  margin: 40px 2px 0px -80px;
+  font-size: 1.6em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg); 
+  -webkit-transform: rotate(-90deg);
+}
+
+.filters_container .genre_filter {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 100%;
+  height: 180px;
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.filters_container .genre_filter .text {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: 80%;
+  margin: 40px 2px 0px -80px;
+  font-size: 1.6em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg); 
+  -webkit-transform: rotate(-90deg);
+}
+
+.rankings_container {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 70%;
+  height: 1000px;
+  margin-left: 270px;
+  margin-right: 10px;  
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.rankings_container .rank {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgb(0, 255, 209);
+}
+
+.rankings_container .rank .rank_number {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: 50px;
+  height: 60px;
+  border-right: 1px solid rgb(0, 255, 209);
+  font-size: 1.4em;
+  line-height: 2.0;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.rankings_container .rank .artist_name {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: 60%;
+  height: 60px;
+  border-right: 1px solid rgb(0, 255, 209);
+  margin-left: 20px;
+  font-size: 1.4em;
+  line-height: 2.0;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.rankings_container .rank .genre_container {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: auto;
+  height: 60px;
+  max-height: 60px;
+  margin-left: 2px;
+  margin-top: 10px;
+  font-size: 1.4em;
+  line-height: 2.0;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.rankings_container .rank .genre_container .genre_view {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  font-size: .7em;
+  line-height: 1.5;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  background-color: #42abff;
+  border-radius: 10px;
+}
+
 
 ._button {
   display: block;
-  position: relative;
   float: left;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.menu ._button {
+  position: relative;
   width: 12%;
   height: 50px;
   margin-top: -50px;
   border-bottom: 1px solid rgb(0, 255, 209);
-  border-radius: 3px;
   font-size: 1em;
   line-height: 1.38;
-  text-align: center;
   color: rgb(54, 61, 63);
+  -webkit-transition: .1s ease;
+  -moz-transition: .1s ease;
+  -o-transition: .1s ease;
+  -ms-transition: .1s ease;
+  transition: .1s ease;
 }
 
-._button:hover {
+.menu ._button:hover {
   border-bottom-width: 7px;
 }
 
-.menu ._button-1 {
-  clear: both;
-  z-index: 1;
+.menu .home-button {
+  z-index: 12;
   margin-left: 10%;
-  -webkit-transition: .1s ease;
-  -moz-transition: .1s ease;
-  -o-transition: .1s ease;
-  -ms-transition: .1s ease;
-  transition: .1s ease;
 }
 
-.menu ._button-1:hover {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.menu ._button-2 {
-  z-index: 2;
+.menu .rankings-button {
+  z-index: 13;
   margin-left: 23.59896%;
-  -webkit-transition: .1s ease;
-  -moz-transition: .1s ease;
-  -o-transition: .1s ease;
-  -ms-transition: .1s ease;
-  transition: .1s ease;
 }
 
-.menu ._button-3 {
-  z-index: 3;
+.menu .about-us-button {
+  z-index: 14;
   margin-left: 37.1992199999%;
-  -webkit-transition: .05s ease;
-  -moz-transition: .05s ease;
-  -o-transition: .05s ease;
-  -ms-transition: .05s ease;
-  transition: .05s ease;
 }
 
-.menu ._button-3:hover {
-  -webkit-transition: .1s ease;
-  -moz-transition: .1s ease;
-  -o-transition: .1s ease;
-  -ms-transition: .1s ease;
-  transition: .1s ease;
+.footer {
+  position: relative;
+  float: left;
+  z-index: 11;
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  margin-top: 50px;
+  background-color: rgb(60, 60, 60);
+}
+
+.footer .text {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 10;
+  width: 100%;
+  height: 0px;
+  margin: 15px 0 0 0%;
+  font-size: 1em;
+  text-align: center;
+  color: rgb(0, 255, 209);
 }
