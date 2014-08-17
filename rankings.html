@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="stagegage">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/rankings-grid.css">
   <link rel="stylesheet" href="css/rankings.css">
+  <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+  <script src="js/angular/rankings.js"></script>
 </head>
-<body class="body index clearfix">
+<body class="body index clearfix"  ng-controller="RankingsController">
   <div class="menu clearfix">
     <div class="menu_bg"></div>
     <button onClick="window.location='index.html';" class="_button home-button">
@@ -30,11 +32,8 @@
     <div class="festival_filter">
       <p class="text">FESTIVAL</p>
       <form action="" class="festival_picker">
-        <select name="festivals" class="festival_select">
-          <option value="festival_1" class="festival_option">FESTIVAL 1</option>
-          <option value="festival_2" class="festival_option">FESTIVAL 22</option>
-          <option value="festival_3" class="festival_option">FESTIVAL 3333</option>
-          <option value="festival_4" class="festival_option">FESTIVAL 444444</option>
+        <select name="festivals_options" class="festival_select">
+          <option value="festival_1" class="festival_option" ng-repeat="festival in festivals"  ng-model="festivalSelection">{{ festival }}</option>
         </select>
       </form>
     </div>
@@ -43,168 +42,15 @@
       <!-- Stuff... -->
     </div>
   </div>
-  <div class="rankings_container">
-    <div class="rank">
-      <p class="rank_number">1</p>
-      <p class="artist_name">MY BAND</p>
+  <ul class="rankings_container">
+    <li class="rank" ng-repeat="rank in ranks  | filter:festivalSelection">
+      <p class="rank_number">{{ ranks.indexOf(rank) + 1 }}</p>
+      <p class="artist_name">{{ rank.name }}</p>
       <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
+        <p class="genre_view" ng-repeat="genre in rank.genres">{{ genre }}</p>
       </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">2</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">3</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">4</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">5</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">6</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">7</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">8</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-        <div class="rank">
-      <p class="rank_number">9</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">10</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">11</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">12</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">13</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">14</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">15</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-    <div class="rank">
-      <p class="rank_number">16</p>
-      <p class="artist_name">MY BAND</p>
-      <div class="genre_container">
-        <p class="genre_view">ROCK</p>
-        <p class="genre_view">POP</p>
-        <p class="genre_view">ELECTRO</p>
-        <p class="genre_view">HOUSE</p>
-      </div>
-    </div>
-  </div>
+    </li>
+  </ul>
   <div class="footer">
     <p class="text">STAGEGAGE</p>
   </div>
