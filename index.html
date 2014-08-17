@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="myApp">
+<html ng-app="stagegage">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/index-grid.css">
   <link rel="stylesheet" href="css/index.css">
+  <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+  <script src="js/angular/home.js"></script>
 </head>
-<body class="body index clearfix">
+<body class="body index clearfix" ng-controller="HomeController">
   <div class="menu clearfix">
     <div class="menu_bg"></div>
     <button onClick="window.location='index.html';" class="_button home-button">
@@ -21,11 +23,20 @@
       <p>ABOUT US</p>
     </button>
   </div>
-  <p class="title" >STAGEGAGE</p>
+  <p class="title">STAGEGAGE</p>
   </script>
   <p class="quote">"RANKING THE BEST LIVE ARTISTS RIGHT NOW"</p>
   <div class="next_fesitval_tile clearfix">
-    <p class="text">NEXT FESTIVAL</p>
+    <p class="text">{{ highlight.title }}</p>
+    <img src="{{highlight.img}}" class="next_festival_img">
+    <p/>
+    <p class="list_title">TOP 5</p>
+    <ul class = "ranks">
+      <li ng-repeat="rank in highlight.ranks | limitTo: 5">
+        {{highlight.ranks.indexOf(rank) + 1}}. {{rank.name}}
+      </li>
+    </ul>
+
   </div>
   <div class="center_tile">
     <p class="box_text">WHO SHOULD I SEE?</p>

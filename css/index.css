@@ -92,6 +92,41 @@ body {
   color: rgb(255, 255, 255);
 }
 
+.next_fesitval_tile .next_festival_img {
+  position: relative;
+  width: 40%;
+  height: 196px;
+}
+
+.next_fesitval_tile .list_title {
+  position: relative;
+  float: left;
+  text-align: center;
+  z-index: 6;
+  width: auto;
+  height: auto;
+  line-height: auto;
+  margin: -190px 0 0 500px;
+  font-size: 1.4em;
+  color: rgb(0, 0, 0);
+  transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg); 
+  -webkit-transform: rotate(-20deg);
+}
+
+.next_fesitval_tile .ranks {
+  position: relative;
+  float: left;
+  text-align: left;
+  z-index: 6;
+  width: auto;
+  height: auto;
+  line-height: auto;
+  margin: -160px 0 0 530px;
+  font-size: 1.0em;
+  color: rgb(0, 0, 0);
+}
+
 .center_tile {
   position: relative;
   float: left;
