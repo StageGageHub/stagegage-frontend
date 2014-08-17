@@ -36,9 +36,9 @@ stagegage.controller('HomeController', function ($scope) {
         ]
     };
 
-  $scope.genres = [
-	  {	'name':'ROCK' },
-	  {	'name':'POP'  },
-	  {	'name':'ELECTRO' }
-     ]
+  $scope.festivals = [
+    'ultra music festival',
+    'outside lands',
+    'coachella',
+  ];
 });
