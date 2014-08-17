@@ -141,22 +141,6 @@ body {
   background-color: rgb(60, 60, 60);
 }
 
-/*.center_tile .box_text{
-  position: relative;
-  float: left;
-  text-align: center;
-  z-index: 6;
-  width: 240px;
-  height: 50px;
-  line-height: 50px;
-  margin: 24px 0 0 -12px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 140, 40);
-  transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg); 
-  -webkit-transform: rotate(-20deg);
-}*/
-
 .center_tile .box_text{
   position: relative;
   float: left;
@@ -172,19 +156,6 @@ body {
   -ms-transform: rotate(-20deg); 
   -webkit-transform: rotate(-20deg);
 }
-
-/*.center_tile .prompt {
-  position: relative;
-  float: left;
-  text-align: center;
-  z-index: 6;
-  width: 300px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1.1em;
-  margin: 80px 0 0 -150px;
-  color: rgb(255, 255, 255);
-}*/
 
 .center_tile .prompt {
   position: relative;
