@@ -115,6 +115,30 @@ body {
   -webkit-transform: rotate(-90deg);
 }
 
+.filters_container .festival_filter .festival_picker {
+  position: relative;
+  float: left;
+  z-index: 8;
+  width: 190px;
+  height: 60px;
+  margin-top: 40px;
+  margin-left: -70px;
+  font-size: 1.6em;   
+}
+
+.filters_container .festival_filter .festival_select {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 255, 209);
+}
+
+.filters_container .festival_filter .festival_select .festival_option {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 255, 209);
+}
+
+
+
 .filters_container .genre_filter {
   position: relative;
   float: left;
