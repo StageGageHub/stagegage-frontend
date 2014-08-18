@@ -233,7 +233,52 @@ body {
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: #42abff;
-  border-radius: 10px;
+  border-radius: 4px;
+}
+
+.rankings_container .rank .genre_container .genre_view:hover {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  font-size: .7em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: #51d2ff;
+  border-radius: 4px;
+}
+
+.genre_view {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  font-size: 1.0em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: #42abff;
+  border-radius: 4px;
+}
+
+.genre_view:hover {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  font-size: 1.0em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: #51d2ff;
+  border-radius: 4px;
 }
 
 
