@@ -28,14 +28,17 @@
   <p class="quote">"RANKING THE BEST LIVE ARTISTS RIGHT NOW"</p>
   <div class="next_fesitval_tile clearfix">
     <p class="text">{{ highlight.title }}</p>
-    <img src="{{highlight.img}}" class="next_festival_img">
-    <p/>
-    <p class="list_title">TOP 5</p>
-    <ul class = "ranks">
-      <li ng-repeat="rank in highlight.ranks | limitTo: 5">
-        {{highlight.ranks.indexOf(rank) + 1}}. {{rank.name}}
-      </li>
-    </ul>
+    <div class="highligh_content_container">
+      <img src="{{highlight.img}}" class="next_festival_img"/>
+      <div class="list_container">
+        <p class="list_title">TOP 5</p>
+        <ul class = "ranks">
+          <li ng-repeat="rank in highlight.ranks | limitTo: 5">
+            {{highlight.ranks.indexOf(rank) + 1}}. {{rank.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
   <div class="center_tile">
     <p class="box_text">WHO SHOULD I SEE?</p>

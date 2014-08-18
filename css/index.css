@@ -31,19 +31,6 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-/*.title {
-  position: relative;
-  float: left;
-  clear: both;
-  z-index: 10;
-  width: 100%;
-  height: 0px;
-  margin: 60px 0 0 0%;
-  font-size: 2em;
-  text-align: center;
-  color: rgb(0, 0, 0);
-}*/
-
 .title {
   position: relative;
   float: left;
@@ -92,21 +79,34 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.next_fesitval_tile .next_festival_img {
+.next_fesitval_tile .highligh_content_container {
+  width: 100%;
+}
+
+.next_fesitval_tile .highligh_content_container .next_festival_img {
   position: relative;
   width: 40%;
   height: 196px;
 }
 
-.next_fesitval_tile .list_title {
+.next_fesitval_tile .highligh_content_container .list_container {
+  position: relative;
+  float: right;
+  z-index: 6;
+  width: 50%;
+  height: 196px;
+  margin: 0px 0 0px 0px;
+}
+
+.next_fesitval_tile .highligh_content_container .list_container .list_title {
   position: relative;
   float: left;
   text-align: center;
   z-index: 6;
-  width: auto;
+  width: 70px;
   height: auto;
   line-height: auto;
-  margin: -190px 0 0 500px;
+  margin: 10px 0px 0px 0px;
   font-size: 1.4em;
   color: rgb(0, 0, 0);
   transform: rotate(-20deg);
@@ -114,7 +114,7 @@ body {
   -webkit-transform: rotate(-20deg);
 }
 
-.next_fesitval_tile .ranks {
+.next_fesitval_tile .highligh_content_container .list_container .ranks {
   position: relative;
   float: left;
   text-align: left;
@@ -122,7 +122,7 @@ body {
   width: auto;
   height: auto;
   line-height: auto;
-  margin: -160px 0 0 530px;
+  margin: 40px 0px 0px -30px;
   font-size: 1.0em;
   color: rgb(0, 0, 0);
 }
@@ -172,9 +172,9 @@ body {
 
 .center_tile .festival_input {
   float: right;
-  width: 35%;
+  width: 280px;
   height: 35px;
-  margin: 90px 30px 0 20px;
+  margin: 90px 50px 0 20px;
   padding: 0 10px;
   border: 1px solid rgb(0, 255, 209);
   background-color: rgb(242, 242, 242);
@@ -185,17 +185,6 @@ body {
 }
 
 .center_tile .festival_input:focus {
-  float: right;
-  width: 35%;
-  height: 35px;
-  margin: 90px 30px 0 20px;
-  padding: 0 10px;
-  border: 1px solid rgb(0, 255, 209);
-  background-color: rgb(242, 242, 242);
-  font-size: 0.9em;
-  font-weight: 400;
-  line-height: 1.38;
-  color: rgb(0, 0, 0);
   box-shadow: 0px 0px 10px rgb(0, 255, 209);
 }
 
@@ -246,7 +235,7 @@ body {
   display: block;
   float: left;
   clear: both;
-  width: 90%;
+  width: 80%;
   height: 35px;
   margin: 20px 0 0 20px;
   padding: 0 10px;
@@ -259,19 +248,6 @@ body {
 }
 
 .festival_select_tile .festival_input:focus {
-  display: block;
-  float: left;
-  clear: both;
-  width: 90%;
-  height: 35px;
-  margin: 20px 0 0 20px;
-  padding: 0 10px;
-  border: 1px solid rgb(0, 255, 209);
-  background-color: rgb(242, 242, 242);
-  font-size: 0.9em;
-  font-weight: 400;
-  line-height: 1.38;
-  color: rgb(0, 0, 0);
   box-shadow: 0px 0px 10px rgb(0, 255, 209);
 }
 

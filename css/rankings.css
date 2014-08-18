@@ -199,6 +199,21 @@ body {
   border-radius: 4px;
 }
 
+.filters_container .genre_filter .selected_genre_view {
+  position: relative;
+  float: left;
+  z-index: 9;
+  width: auto;
+  height: auto;
+  margin-left: 4px;
+  font-size: 1.0em;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: #51d2ff;
+  border-radius: 4px;
+}
+
 .rankings_container {
   position: relative;
   float: left;
