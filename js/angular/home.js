@@ -42,3 +42,4 @@ stagegage.controller('HomeController', function ($scope) {
     'coachella',
   ];
 });
+

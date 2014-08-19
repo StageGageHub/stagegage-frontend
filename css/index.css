@@ -56,6 +56,15 @@ body {
   z-index: 14;
 }
 
+#auth-overlay {
+  width: 100%;
+  height: 100%;
+  opacity: .92;
+  position: fixed;
+  background: rgb(0, 0, 0);
+  z-index: 1000;
+}
+
 .title {
   position: relative;
   float: left;

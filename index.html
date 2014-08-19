@@ -11,13 +11,40 @@
   <script src="http://code.angularjs.org/snapshot/angular.js"></script>
   <script src="js/angular/home.js"></script>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=271053079752670&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '271053079752670',
+          status     : true,
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script type="text/javascript">
+      FB.getLoginStatus(function(response) {
+        if (!response.status === 'connected') {
+          var uid = response.authResponse.userID;
+          // Log this shit (send UID to service)
+          var accessToken = response.authResponse.accessToken;
+
+          var authOverlay = document.getElementById('auth-overlay');
+          authOverlay.style.opacity = 0;
+          authOverlay.style.width = 0;
+          authOverlay.style.height = 0;
+        } else {
+          // Unauthorized user... 
+        }
+       });
+    </script>
 </head>
 <body class="body index clearfix" ng-controller="HomeController">
   <div class="menu clearfix">
@@ -34,6 +61,7 @@
         <div class="fb-login-button" data-max-rows="1" data-size="small" data-show-faces="true" data-auto-logout-link="false"></div>
     </div>
   </div>
+  <div id="auth-overlay"> STFF</div>
   <p class="title">STAGEGAGE</p>
   </script>
   <p class="quote">"RANKING THE BEST LIVE ARTISTS RIGHT NOW"</p>
