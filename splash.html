@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="stagegage">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>STAGEGAGE</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/splash.css">
+  <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+  <script src="js/angular/home.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=271053079752670&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</head>
+<body class="body index clearfix" ng-controller="SplashController">
+  <p class="title">STAGEGAGE</p>
+  </script>
+  <p class="quote">"RANKING THE BEST LIVE ARTISTS RIGHT NOW"</p>
+  <div id="instructions" class="tile">
+    <p id="text">Testers login with facebook to continue</p>
+    <div id="fb-login" class="fb-login-button" data-max-rows="1" data-size="small" data-show-faces="true" data-auto-logout-link="false">
+    </div>
+  </div>
+</body>
+</html>

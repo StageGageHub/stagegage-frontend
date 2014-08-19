@@ -1,0 +1,41 @@
+@font-face {
+    font-family: pacifica;
+    src: url(../fonts/pacifica-condensed-regular.ttf);
+}
+
+body {
+  background-color: #252525;
+  font: 300 1.25em/1.38 pacifica;
+  color: rgb(0, 0, 0);
+}
+
+
+
+#instructions {
+  z-index: 2;
+  width: 50%;
+  position: fixed;
+  height: 246px;
+  margin-left: 25%;
+  margin-right: 100px;
+  margin-top: 50px;
+  background-color: #414545;
+}
+
+#instructions #text {
+	margin-top: 20px;
+	text-align: center;
+  	color: rgb(0, 255, 209);
+}
+
+#instructions #fb-login {
+  width: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.tile {
+  border: 1px solid rgb(0, 255, 209);
+  background-color: #ffffff;
+}
+

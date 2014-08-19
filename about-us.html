@@ -1,31 +1,29 @@
 <!doctype html>
-<html>
+<html ng-app="stagegage">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
   <title>ABOUT-US</title>
-  <link href="http://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/about-us-grid.css">
   <link rel="stylesheet" href="css/about-us.css">
+  <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+  <script src="js/angular/home.js"></script>
 </head>
 <body class="body about-us clearfix">
-  <div class="menu clearfix">
-    <div class="menu_bar_bg"></div>
-    <button onClick="window.location='index.html';" class="_button _button-1">
-      <p>HOME</p>
-      <p></p>
-    </button>
-    <button onClick="window.location='rankings.html';" class="_button _button-2">
-      <p>RANKINGS</p>
-      <p></p>
-      <p></p>
-    </button>
-    <button onClick="window.location='about-us.html';" class="_button _button-3">
-      <p>ABOUT US</p>
-      <p></p>
-      <p></p>
-    </button>
+   <div class="menu clearfix">
+    <div class="menu_bg">
+      <button onClick="window.location='index.html';" class="_button home-button">
+        <p>HOME</p>
+      </button>
+      <button onClick="window.location='rankings.html';" class="_button rankings-button">
+        <p>RANKINGS</p>
+      </button>
+      <button onClick="window.location='about-us.html';" class="_button about-us-button">
+        <p>ABOUT US</p>
+      </button>
+        <div class="fb-login-button" data-max-rows="1" data-size="small" data-show-faces="true" data-auto-logout-link="false"></div>
+    </div>
   </div>
 </body>
 </html>
