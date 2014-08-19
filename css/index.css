@@ -30,6 +30,11 @@ body {
   height: 50px;
   background-color: rgb(255, 255, 255);
 }
+.menu .fb_login {
+  float: right;
+  z-index: 14;
+  margin-top: 100px;
+}
 
 .title {
   position: relative;
