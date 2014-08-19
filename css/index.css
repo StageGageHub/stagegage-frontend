@@ -31,6 +31,31 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+.menu ._button:hover {
+  border-bottom-width: 7px;
+}
+
+.menu .home-button {
+  z-index: 12;
+  margin-left: 10%;
+}
+
+.menu .rankings-button {
+  z-index: 13;
+  margin-left: 10px;
+}
+
+.menu .about-us-button {
+  z-index: 14;
+  margin-left: 10px;
+}
+.menu .fb-login-button {
+  margin-top: -3px;
+  margin-right: 30px;
+  float: right;
+  z-index: 14;
+}
+
 .title {
   position: relative;
   float: left;
@@ -305,7 +330,6 @@ body {
   position: relative;
   width: 12%;
   height: 50px;
-  margin-top: -50px;
   border-bottom: 1px solid rgb(0, 255, 209);
   font-size: 1em;
   line-height: 1.38;
@@ -315,25 +339,6 @@ body {
   -o-transition: .1s ease;
   -ms-transition: .1s ease;
   transition: .1s ease;
-}
-
-.menu ._button:hover {
-  border-bottom-width: 7px;
-}
-
-.menu .home-button {
-  z-index: 12;
-  margin-left: 10%;
-}
-
-.menu .rankings-button {
-  z-index: 13;
-  margin-left: 23.59896%;
-}
-
-.menu .about-us-button {
-  z-index: 14;
-  margin-left: 37.1992199999%;
 }
 
 .footer {
