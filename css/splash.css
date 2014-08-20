@@ -73,6 +73,20 @@ body {
   margin-left: 10px;
 }
 
+.animate-hide { 
+  -webkit-transition: background-color linear 0.0s;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  transition: background-color linear 0.1s;
+  opacity:1;
+}
+
+.animate-hide.ng-hide {
+  opacity:0;
+}
+
+
+
 .to-stagegage-button {
   border: 1px solid rgb(0, 255, 209);
   color: rgb(0, 255, 209);
