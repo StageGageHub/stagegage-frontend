@@ -1,5 +1,3 @@
-// var stagegage = angular.module('stagegage', []);
-
 stagegage.controller('AuthController', function ($scope) {
   console.log('temporarily unauthorizing user');
   $scope.isAuthorized = false;
@@ -36,11 +34,10 @@ stagegage.controller('AuthController', function ($scope) {
     console.log("auth_status_change_callback: " + response.status);
     if (response.status === 'connected') {
       console.log('Authenticated user detected');
-      authOverlay.style.width = 0;
-      authOverlay.style.height = 0;
-      authOverlay.style.display = 'none';
-      // Should trigger angular reload
       $scope.$apply(function () {
+        authOverlay.style.width = 0;
+        authOverlay.style.height = 0;
+        authOverlay.style.display = 'none';
         $scope.isAuthorized = true;
       });
       // Log this shit (send UID to service)
@@ -51,10 +48,10 @@ stagegage.controller('AuthController', function ($scope) {
       console.log('Unauthorized user detected');
       $scope.$apply(function () {
         $scope.isAuthorized = false;
+        authOverlay.style.width = 100;
+        authOverlay.style.height = 100;
+        authOverlay.style.display = 'inline';
       });
-      authOverlay.style.width = 100;
-      authOverlay.style.height = 100;
-      authOverlay.style.display = 'inline';
     }
   }
 });
