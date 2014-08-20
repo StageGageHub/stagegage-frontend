@@ -63,6 +63,8 @@ body {
   width: auto;
   text-align: center;
   margin-top: 60px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .tile {
