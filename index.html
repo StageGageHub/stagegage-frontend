@@ -8,9 +8,11 @@
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/index-grid.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/auth-overlay.css">
   <script src="http://code.angularjs.org/snapshot/angular.js"></script>
   <script src="js/angular/home.js"></script>
-<div id="fb-root"></div>
+  <script src="js/angular/auth.js"></script>
+  <div id="fb-root"></div>
   <script>
     console.log('Starting FB init');
     (function(d, s, id){
@@ -37,9 +39,9 @@
         <div class="fb-login-button" data-max-rows="1" data-size="small" data-show-faces="true" data-auto-logout-link="false"></div>
     </div>
   </div>
-  <div id="auth-overlay">
+  <div id="auth-overlay" ng-controller="AuthController">
     <div id="auth-overlay-tile">
-      <p id="auth-overlay-tile-text" ng-controller="AuthController">{{ unauthorizedMessage }}</p>
+      <p id="auth-overlay-tile-text">{{ unauthorizedMessage }}</p>
     </div>
   </div>
   <p class="title">STAGEGAGE</p>
@@ -62,7 +64,9 @@
   <div class="center_tile">
     <p class="box_text">WHO SHOULD I SEE?</p>
     <p class="prompt">WHICH FESTIVAL ARE YOU ATTENDING?</p>
-    <input class="festival_input" type="text" list="futureFestivals">
+    <form ng-submit="redirectToRankings(futureFestivalRank.name)">  
+      <input class="festival_input" type="text" list="futureFestivals" ng-model="futureFestivalRank.name">
+    </form>
     <datalist id="futureFestivals" class="festival_list_suggestion">
       <option ng-repeat="festival in festivals" value="{{ festival }}"></option>
     </datalist>
@@ -70,7 +74,9 @@
   <div class="festival_select_tile clearfix">
     <p class="text" >RANK YOUR FESTIVAL EXPERIENCE</p>
     <p class="prompt">WHICH FESTIVAL DID YOU ATTEND?</p>
-    <input class="festival_input" type="text" list="pastFestivals">
+    <form ng-submit="redirectToCreateRank(toRank.name)">
+      <input class="festival_input" type="text" list="pastFestivals" ng-model="toRank.name"/>
+    </form>
     <datalist id="pastFestivals" class="festival_list_suggestion">
       <option ng-repeat="festival in festivals" value="{{ festival }}"></option>
     </datalist>
