@@ -43,3 +43,24 @@ stagegage.controller('HomeController', function ($scope) {
   ];
 });
 
+
+window.fbAsyncInit = function onFBLoad() {
+  FB.getLoginStatus(function(response) {
+    if (!response.status === 'connected') {
+      var uid = response.authResponse.userID;
+      // Log this shit (send UID to service)
+      var accessToken = response.authResponse.accessToken;
+
+      var authOverlay = document.getElementById('auth-overlay');
+      authOverlay.style.opacity = 0;
+      authOverlay.style.width = 0;
+      authOverlay.style.height = 0;
+    } else {
+      // Unauthorized user... 
+      authOverlay.style.opacity = 100;
+      authOverlay.style.width = 100;
+      authOverlay.style.height = 100;
+    }
+  });
+}
+
