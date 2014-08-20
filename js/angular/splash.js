@@ -12,6 +12,10 @@ stagegage.controller('SplashController', function ($scope) {
       xfbml      : true,
       version    : 'v2.0'
     });
+
+    FB.Event.subscribe('auth.authResponseChange', auth_response_change_callback);
+    FB.Event.subscribe('auth.statusChange', auth_status_change_callback);
+
     FB.getLoginStatus(function(response) {
       var authOverlay = document.getElementById('auth-overlay');
       if (response.status === 'connected') {
@@ -31,3 +35,12 @@ stagegage.controller('SplashController', function ($scope) {
     });
   }
 });
+
+var auth_response_change_callback = function(response) {
+  console.log("auth_response_change_callback");
+  console.log(response);
+}
+
+var auth_status_change_callback = function(response) {
+  console.log("auth_status_change_callback: " + response.status);
+}
