@@ -1,7 +1,6 @@
 stagegage.controller('AuthController', function ($scope) {
   console.log('temporarily unauthorizing user');
   $scope.isAuthorized = false;
-  
   window.fbAsyncInit = function onFBLoad() {
     console.log('initializing FB');
     FB.init({
@@ -32,6 +31,7 @@ stagegage.controller('AuthController', function ($scope) {
 
   var auth_status_change_callback = function(response) {
     console.log("auth_status_change_callback: " + response.status);
+    var authOverlay = window.document.getElementById('auth-overlay');
     if (response.status === 'connected') {
       console.log('Authenticated user detected');
       $scope.$apply(function () {
