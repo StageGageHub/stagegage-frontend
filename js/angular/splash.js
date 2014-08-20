@@ -13,7 +13,6 @@ stagegage.controller('SplashController', function ($scope) {
       version    : 'v2.0'
     });
 
-    // FB.Event.subscribe('auth.authResponseChange', auth_response_change_callback);
     FB.Event.subscribe('auth.statusChange', auth_status_change_callback);
   }
 
@@ -31,12 +30,9 @@ stagegage.controller('SplashController', function ($scope) {
       var accessToken = response.authResponse.accessToken;
     } else {
       console.log('Unauthorized user detected');
-      $scope.isAuthorized = false;
+      $scope.$apply(function () {
+        $scope.isAuthorized = false;
+      });
     }
   }
 });
-
-// var auth_response_change_callback = function(response) {
-//   console.log("auth_response_change_callback");
-//   console.log(response);
-// }
