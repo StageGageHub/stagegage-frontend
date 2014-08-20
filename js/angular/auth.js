@@ -11,7 +11,9 @@ stagegage.controller('AuthController', function ($scope) {
     });
 
     FB.Event.subscribe('auth.statusChange', auth_status_change_callback);
+    auth_status_change_callback();
   }
+
 
   console.log('attempting to update unauthorized message');
   var unauthorizedMessages =
@@ -35,9 +37,11 @@ stagegage.controller('AuthController', function ($scope) {
     if (response.status === 'connected') {
       console.log('Authenticated user detected');
       $scope.$apply(function () {
-        authOverlay.style.width = 0;
-        authOverlay.style.height = 0;
-        authOverlay.style.display = 'none';
+        if(authOverlay != null) {  
+          authOverlay.style.width = 0;
+          authOverlay.style.height = 0;
+          authOverlay.style.display = 'none';
+        }
         $scope.isAuthorized = true;
       });
       // Log this shit (send UID to service)
@@ -47,10 +51,12 @@ stagegage.controller('AuthController', function ($scope) {
     } else {
       console.log('Unauthorized user detected');
       $scope.$apply(function () {
+        if(authOverlay != null) {
+          authOverlay.style.width = 100;
+          authOverlay.style.height = 100;
+          authOverlay.style.display = 'inline';
+        }
         $scope.isAuthorized = false;
-        authOverlay.style.width = 100;
-        authOverlay.style.height = 100;
-        authOverlay.style.display = 'inline';
       });
     }
   }
