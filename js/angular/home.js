@@ -55,7 +55,7 @@ window.fbAsyncInit = function onFBLoad() {
 
   console.log('In fbAsyncInit');
   FB.getLoginStatus(function(response) {
-    if (!response.status === 'connected') {
+    if (response.status === 'connected') {
       console.log('Authenticated user detected');
       var uid = response.authResponse.userID;
       // Log this shit (send UID to service)
