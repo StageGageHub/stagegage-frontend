@@ -55,18 +55,17 @@ window.fbAsyncInit = function onFBLoad() {
 
   console.log('In fbAsyncInit');
   FB.getLoginStatus(function(response) {
+    var authOverlay = document.getElementById('auth-overlay');
     if (response.status === 'connected') {
       console.log('Authenticated user detected');
       var uid = response.authResponse.userID;
       // Log this shit (send UID to service)
       var accessToken = response.authResponse.accessToken;
-      var authOverlay = document.getElementById('auth-overlay');
       authOverlay.style.width = 0;
       authOverlay.style.height = 0;
     } else {
       console.log('Unauthorized user detected');
       // Unauthorized user... 
-      authOverlay.style.opacity = 100;
       authOverlay.style.width = 100;
       authOverlay.style.height = 100;
     }
