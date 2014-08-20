@@ -41,6 +41,51 @@ stagegage.controller('HomeController', function ($scope) {
     'outside lands',
     'coachella',
   ];
+
+  $scope.toRank = {
+    'name':''
+  };
+
+  $scope.futureFestivalRank = {
+    'name':''
+  };
+
+
+
+  $scope.redirectToCreateRank = function(festivaName) {
+    
+    var isValid = false;
+    angular.forEach($scope.festivals, function(expectedName) {
+      if(festivaName == expectedName)
+        isValid = true;
+    });
+
+    if(isValid) {
+      var url = 'http://stagegage.com/create-rank.html?festival=' + festivaName;
+      console.log('redirecting to: ' + url);
+      window.location.href = url;
+    } else {
+      console.log('invalid festival name');
+    }
+  };
+
+  $scope.redirectToRankings = function(festivaName) {
+    
+    var isValid = false;
+    angular.forEach($scope.festivals, function(expectedName) {
+      if(festivaName == expectedName)
+        isValid = true;
+    });
+
+    if(isValid) {
+      var url = 'http://stagegage.com/rankings.html?festival=' + festivaName;
+      console.log('redirecting to: ' + url);
+      window.location.href = url;
+    } else {
+      console.log('invalid festival name');
+    }
+  };
+
 });
 
 

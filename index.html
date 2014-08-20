@@ -64,7 +64,9 @@
   <div class="center_tile">
     <p class="box_text">WHO SHOULD I SEE?</p>
     <p class="prompt">WHICH FESTIVAL ARE YOU ATTENDING?</p>
-    <input class="festival_input" type="text" list="futureFestivals">
+    <form ng-submit="redirectToRankings(futureFestivalRank.name)">  
+      <input class="festival_input" type="text" list="futureFestivals" ng-model="futureFestivalRank.name">
+    </form>
     <datalist id="futureFestivals" class="festival_list_suggestion">
       <option ng-repeat="festival in festivals" value="{{ festival }}"></option>
     </datalist>
@@ -72,7 +74,9 @@
   <div class="festival_select_tile clearfix">
     <p class="text" >RANK YOUR FESTIVAL EXPERIENCE</p>
     <p class="prompt">WHICH FESTIVAL DID YOU ATTEND?</p>
-    <input class="festival_input" type="text" list="pastFestivals">
+    <form ng-submit="redirectToCreateRank(toRank.name)">
+      <input class="festival_input" type="text" list="pastFestivals" ng-model="toRank.name"/>
+    </form>
     <datalist id="pastFestivals" class="festival_list_suggestion">
       <option ng-repeat="festival in festivals" value="{{ festival }}"></option>
     </datalist>
