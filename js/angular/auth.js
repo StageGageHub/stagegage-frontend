@@ -33,7 +33,7 @@ stagegage.controller('AuthController', function ($scope) {
 
   var authStatusChangeCallback = function(response) {
     console.log("auth_status_change_callback: " + response.status);
-    if(response.status === 'undefined')
+    if(response.status === undefined)
       return;
 
     var authOverlay = window.document.getElementById('auth-overlay');
