@@ -3,7 +3,6 @@ var stagegage = angular.module('stagegage', []);
 stagegage.controller('SplashController', function ($scope) {
   console.log('temporarily unauthorizing user');
   $scope.isAuthorized = false;
-
   
   window.fbAsyncInit = function onFBLoad() {
     console.log('initializing FB');
