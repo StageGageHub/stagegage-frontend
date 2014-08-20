@@ -29,7 +29,6 @@ stagegage.controller('AuthController', function ($scope) {
       }
   });
 }
-  }
 
 
   console.log('attempting to update unauthorized message');
