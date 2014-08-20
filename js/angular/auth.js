@@ -11,7 +11,24 @@ stagegage.controller('AuthController', function ($scope) {
     });
 
     FB.Event.subscribe('auth.statusChange', authStatusChangeCallback);
-    authStatusChangeCallback(FB.getAuthResponse);
+    // authStatusChangeCallback(FB.getAuthResponse);
+
+    FB.getLoginStatus(function(response) {
+      var authOverlay = document.getElementById('auth-overlay');
+      if (response.status === 'connected') {
+        console.log('Authenticated user detected');
+        authOverlay.style.width = 0;
+        authOverlay.style.height = 0;
+        authOverlay.style.display = 'none';
+      } else {
+        console.log('Unauthorized user detected');
+        // Unauthorized user... 
+        authOverlay.style.width = 100;
+        authOverlay.style.height = 100;
+        authOverlay.style.display = 'inline';
+      }
+  });
+}
   }
 
 
