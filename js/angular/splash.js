@@ -16,7 +16,10 @@ stagegage.controller('SplashController', function ($scope) {
       var authOverlay = document.getElementById('auth-overlay');
       if (response.status === 'connected') {
         console.log('Authenticated user detected');
-        $scope.isAuthorized = true;
+        // Should trigger angular reload
+        $scope.$apply(function () {
+          $scope.isAuthorized = true;
+        });
         // Log this shit (send UID to service)
         var uid = response.authResponse.userID;
         console.log('userID = ' + uid);
