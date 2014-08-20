@@ -81,7 +81,7 @@ stagegage.controller('AuthController', function ($scope) {
          'I\'m sorry, the page you are trying to access is currently hibernating and will be emerging soon. Please refresh the page every 1-1000 hours for updates. Email us at stagegage@gmail.com if you\'re tired of refreshing'
         ];
 
-  var randIndex = Math.floor(Math.random() * (unauthorizedMessages.length + 1));
+  var randIndex = Math.floor(Math.random() * (unauthorizedMessages.length));
   var message = unauthorizedMessages[randIndex];
 
   $scope.unauthorizedMessage = message;
