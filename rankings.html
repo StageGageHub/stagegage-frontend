@@ -9,6 +9,18 @@
   <link rel="stylesheet" href="css/rankings.css">
   <script src="http://code.angularjs.org/snapshot/angular.js"></script>
   <script src="js/angular/rankings.js"></script>
+  <script src="js/angular/auth.js"></script>
+  <div id="fb-root"></div>
+  <script>
+    console.log('Starting FB init');
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
 </head>
 <body class="body index clearfix"  ng-controller="RankingsController">
   <div class="menu clearfix">
@@ -23,6 +35,7 @@
       <p>ABOUT US</p>
     </button>
   </div>
+  <div id="auth-overlay" ng-controller="AuthController">
   <div class="title_container">  
     <p class="title">THE FULL RANKINGS</p>
     <p class="quote">ALBUMS. SOLO. GENRE. FAME. NONE OF IT MATTERS. STAGEGAGE BRINGS YOU THE ARTISTS YOU LOVE TO SEE LIVE.</p>
