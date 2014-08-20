@@ -66,6 +66,25 @@ body {
   margin-right: 100px;
 }
 
+#button-text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.to-stagegage-button {
+  border: 1px solid rgb(0, 255, 209);
+  color: rgb(0, 255, 209);
+  margin-left: 185px;
+}
+
+.to-stagegage-button:hover {
+  border: 1px solid rgb(0, 255, 209);
+  background-color: #252525;
+  margin-left: 185px;
+}
+
 .tile {
   border: 1px solid rgb(0, 255, 209);
   background-color: #ffffff;
