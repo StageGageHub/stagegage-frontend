@@ -43,7 +43,6 @@ stagegage.controller('HomeController', function ($scope) {
   ];
 });
 
-
 window.fbAsyncInit = function onFBLoad() {
     console.log('initializing FB');
     FB.init({
@@ -55,6 +54,7 @@ window.fbAsyncInit = function onFBLoad() {
 
   console.log('In fbAsyncInit');
   FB.getLoginStatus(function(response) {
+
     var authOverlay = document.getElementById('auth-overlay');
     if (response.status === 'connected') {
       console.log('Authenticated user detected');

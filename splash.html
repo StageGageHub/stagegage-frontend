@@ -8,15 +8,7 @@
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/splash.css">
   <script src="http://code.angularjs.org/snapshot/angular.js"></script>
-  <script src="js/angular/home.js"></script>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=271053079752670&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  <script src="js/angular/splash.js"></script>
 </head>
 <body class="body index clearfix" ng-controller="SplashController">
   <p id="title">STAGEGAGE</p>
@@ -28,7 +20,7 @@
         <div id="fb-login" class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-width="50%" data-auto-logout-link="false">
         </div>
       </div>
-      <button onClick="window.location='index.html';" class="to-stagegage-button">
+      <button onClick="window.location='index.html';" class="to-stagegage-button" ng-hide="!isAuthorized">
         <p id="button-text">To Stagegage</p>
       </button>
     </div>
