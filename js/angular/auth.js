@@ -10,8 +10,8 @@ stagegage.controller('AuthController', function ($scope) {
       version    : 'v2.0'
     });
 
-    FB.Event.subscribe('auth.statusChange', auth_status_change_callback);
-    auth_status_change_callback();
+    FB.Event.subscribe('auth.statusChange', authStatusChangeCallback);
+    authStatusChangeCallback(FB.getAuthResponse);
   }
 
 
@@ -31,7 +31,7 @@ stagegage.controller('AuthController', function ($scope) {
   console.log('updated unauthorized message');
 
 
-  var auth_status_change_callback = function(response) {
+  var authStatusChangeCallback = function(response) {
     console.log("auth_status_change_callback: " + response.status);
     var authOverlay = window.document.getElementById('auth-overlay');
     if (response.status === 'connected') {
