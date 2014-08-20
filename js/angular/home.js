@@ -63,11 +63,13 @@ window.fbAsyncInit = function onFBLoad() {
       var accessToken = response.authResponse.accessToken;
       authOverlay.style.width = 0;
       authOverlay.style.height = 0;
+      authOverlay.style.display = 'none';
     } else {
       console.log('Unauthorized user detected');
       // Unauthorized user... 
       authOverlay.style.width = 100;
       authOverlay.style.height = 100;
+      authOverlay.style.display = 'inline';
     }
   });
 }

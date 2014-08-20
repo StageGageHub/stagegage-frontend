@@ -64,6 +64,7 @@ body {
   z-index: 1000;
   text-align: center;
   vertical-align: center;
+  display: none;
 }
 
 #auth-overlay #auth-overlay-tile {
