@@ -11,7 +11,7 @@ stagegage.controller('AuthController', function ($scope) {
     });
 
     FB.Event.subscribe('auth.statusChange', authStatusChangeCallback);
-    authStatusChangeCallback(FB.getAuthResponse);
+    //authStatusChangeCallback(FB.getAuthResponse);
   }
 
 
