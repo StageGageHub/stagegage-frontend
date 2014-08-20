@@ -78,11 +78,11 @@ body {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
   transition: background-color linear 0.1s;
-  opacity:1;
+  opacity: 1;
 }
 
-.animate-hide.ng-show {
-  opacity:0;
+.animate-hide.ng-hide {
+  opacity: 0;
 }
 
 
