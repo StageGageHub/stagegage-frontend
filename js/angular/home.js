@@ -80,7 +80,8 @@ stagegage.controller('AuthController', function ($scope) {
         ['Looks like you\'ve stumbled somewhere you shouldn\'t be. Stagegage is currently in private beta. If you think this message is a mistake email us at Stagegage.com',
          'Dear Human,\n Congratulations!! You have found the entrance to the amazing place known in popular and religious culture known as \" heaven \". Please email me (g0d) at stagegage@gmail.com explaining why you deserve access. (disclaimer: scientologists and ISIS members need not apply)',
          'Unnfortunately if you are seeing this message you are part of the general public and as such are not privy to stagegage at this time. we will be opening up our site to the normal folk in the near future. Email us at stagegage@gmail.com if you think you should be given special treatment.',
-         'I\'m sorry, the page you are trying to access is currently hibernating and will be emerging soon. Please refresh the page every 1-1000 hours for updates. Email us at stagegage@gmail.com if you\'re tired of refreshing'
+         'I\'m sorry, the page you are trying to access is currently hibernating and will be emerging soon. Please refresh the page every 1-1000 hours for updates. Email us at stagegage@gmail.com if you\'re tired of refreshing',
+         'Stagegage has 99 problems but you accessing our site ait\'nt one. Come back later. (email us at stagegage@gmail.com if you think you should in fact be a problem).'
         ];
 
   var randIndex = Math.floor(Math.random() * (unauthorizedMessages.length));
