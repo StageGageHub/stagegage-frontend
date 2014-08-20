@@ -71,7 +71,9 @@ window.fbAsyncInit = function onFBLoad() {
       authOverlay.style.height = 100;
     }
   });
+}
 
+stagegage.controller('AuthController', function ($scope) {
   console.log('attempting to update unauthorized message');
   var unauthorizedMessages =
         ['Looks like you\'ve stumbled somewhere you shouldn\'t be. Stagegage is currently in private beta. If you think this message is a mistake email us at Stagegage.com',
@@ -80,12 +82,12 @@ window.fbAsyncInit = function onFBLoad() {
          'I\'m sorry, the page you are trying to access is currently hibernating and will be emerging soon. Please refresh the page every 1-1000 hours for updates. Email us at stagegage@gmail.com if you\'re tired of refreshing'
         ];
 
-  var message = unauthorizedMessages[Math.floor(Math.random() * (unauthorizedMessages.length + 1))];
-  
-  var authOverlayText = document.getElementById('auth-overlay-tile-text');
-  authOverlayText.value = message;
+  var randIndex = Math.floor(Math.random() * (unauthorizedMessages.length + 1));
+  var message = unauthorizedMessages[randIndex];
+
+  $scope.unauthorizedMessage = message;
   console.log('updated unauthorized message');
-}
+});
 
 
 

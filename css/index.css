@@ -63,6 +63,7 @@ body {
   background: rgba(0, 0, 0, .92);
   z-index: 1000;
   text-align: center;
+  vertical-align: center;
 }
 
 #auth-overlay #auth-overlay-tile {
@@ -77,6 +78,9 @@ body {
 }
 
 #auth-overlay-tile-text {
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
   color: rgb(0, 255, 209);
 }
 
