@@ -45,6 +45,14 @@ stagegage.controller('HomeController', function ($scope) {
 
 
 window.fbAsyncInit = function onFBLoad() {
+    console.log('initializing FB');
+    FB.init({
+      appId      : '271053079752670',
+      status     : true,
+      xfbml      : true,
+      version    : 'v2.0'
+    });
+
   console.log('In fbAsyncInit');
   FB.getLoginStatus(function(response) {
     if (!response.status === 'connected') {
