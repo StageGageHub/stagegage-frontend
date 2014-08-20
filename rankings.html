@@ -36,7 +36,11 @@
       <p>ABOUT US</p>
     </button>
   </div>
-  <div id="auth-overlay" ng-controller="AuthController"></div>
+  <div id="auth-overlay" ng-controller="AuthController">
+    <div id="auth-overlay-tile">
+      <p id="auth-overlay-tile-text">{{ unauthorizedMessage }}</p>
+    </div>
+  </div>
   <div class="title_container">  
     <p class="title">THE FULL RANKINGS</p>
     <p class="quote">ALBUMS. SOLO. GENRE. FAME. NONE OF IT MATTERS. STAGEGAGE BRINGS YOU THE ARTISTS YOU LOVE TO SEE LIVE.</p>
