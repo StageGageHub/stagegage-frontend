@@ -72,6 +72,7 @@ window.fbAsyncInit = function onFBLoad() {
     }
   });
 
+  console.log('attempting to update unauthorized message');
   var unauthorizedMessages =
         ['Looks like you\'ve stumbled somewhere you shouldn\'t be. Stagegage is currently in private beta. If you think this message is a mistake email us at Stagegage.com',
          'Dear Human,\n Congratulations!! You have found the entrance to the amazing place known in popular and religious culture known as \" heaven \". Please email me (g0d) at stagegage@gmail.com explaining why you deserve access. (disclaimer: scientologists and ISIS members need not apply)',
@@ -81,7 +82,8 @@ window.fbAsyncInit = function onFBLoad() {
 
   var message = unauthorizedMessages[Math.floor(Math.random() * (unauthorizedMessages.length + 1))];
   
-  document.getElementById('auth-overlay') = message;
+  var authOverlayText = document.getElementById('auth-overlay-tile-text');
+  authOverlayText.value = message;
   console.log('updated unauthorized message');
 }
 
