@@ -9,8 +9,19 @@
   <link rel="stylesheet" href="css/splash.css">
   <script src="http://code.angularjs.org/snapshot/angular.js"></script>
   <script src="js/angular/splash.js"></script>
+  <script>
+    console.log('Starting FB init');
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
 </head>
 <body class="body index clearfix" ng-controller="SplashController">
+  <div id="fb-root"></div>
   <p id="title">STAGEGAGE</p>
   <p id="quote">"RANKING THE BEST LIVE ARTISTS RIGHT NOW"</p>
   <div id="instructions-container">  
