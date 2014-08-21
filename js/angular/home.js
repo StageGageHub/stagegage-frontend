@@ -61,7 +61,7 @@ stagegage.controller('HomeController', function ($scope) {
     });
 
     if(isValid) {
-      var url = 'http://stagegage.com/create-rank.html?festival=' + festivaName;
+      var url = 'http://stagegage.com/create-rank.html#?festival=' + festivaName;
       console.log('redirecting to: ' + url);
       window.location.href = url;
     } else {
@@ -78,7 +78,7 @@ stagegage.controller('HomeController', function ($scope) {
     });
 
     if(isValid) {
-      var url = 'http://stagegage.com/rankings.html?festival=' + festivaName;
+      var url = 'http://stagegage.com/rankings.html#?festival=' + festivaName;
       console.log('redirecting to: ' + url);
       window.location.href = url;
     } else {

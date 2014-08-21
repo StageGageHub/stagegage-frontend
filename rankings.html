@@ -50,7 +50,7 @@
     <div class="festival_filter">
       <p class="text">FESTIVAL</p>
       <form action="" class="festival_picker">
-        <select name="festivals_options" class="festival_select" ng-model="festivalSelection">
+        <select id="festivalFilterSelector" name="festivals_options" class="festival_select" ng-model="festivalSelector">
           <!-- don't forget the blank option -->
           <option></option>
           <option class="festival_option" ng-repeat="festival in festivals">{{ festival }}</option>
@@ -67,7 +67,7 @@
     </div>
   </div>
   <ul class="rankings_container">
-    <li class="rank" ng-repeat="rank in (filteredRanks = (ranks | filter:festivalSelection | filterByGenre:filteredGenres ))">
+    <li class="rank" ng-repeat="rank in (filteredRanks = (ranks | filter:festivalSelector | filterByGenre:filteredGenres ))">
       <p class="rank_number">{{ filteredRanks.indexOf(rank) + 1 }}</p>
       <p class="artist_name">{{ rank.name }}</p>
       <div class="genre_container">

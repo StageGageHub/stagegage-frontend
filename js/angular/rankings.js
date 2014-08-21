@@ -1,6 +1,28 @@
 var stagegage = angular.module('stagegage', []);
 
-stagegage.controller('RankingsController', function ($scope) {
+stagegage.controller('RankingsController', function ($scope, $location) {
+
+  $scope.$watch('festivalSelection', function (selector) {
+    var festivalQP = $location.search();
+  	if(festivalQP != null) {
+  	  console.log('festival qp value: ' + festivalQP.festival);
+	  var selector = document.getElementById('festivalFilterSelector');
+
+	  for(var i = 0; i < selector.length; i++) {
+	  	console.log('value: ' + selector.options[i].value);
+	  	console.log('text: ' + selector.options[i].text);
+	  	if(selector.options[i].value == festivalQP.festival) {
+	  		console.log('found match');
+	  		selector.value = selector.options[i];
+	  	}
+	  }
+
+	  // selector.value = festivalQP;
+  	} else {
+	  console.log('no festival queryParam found');
+  	}
+  });
+
   $scope.ranks = [
     { 'name': 'THE BEST BAND', 
 	  'genres' : ['rock', 'pop', 'electro'],
