@@ -14,7 +14,7 @@ stagegage.controller('SplashController', function ($scope) {
     });
 
     FB.Event.subscribe('auth.statusChange', auth_status_change_callback);
-  }
+  };
 
   var auth_status_change_callback = function(response) {
     console.log("auth_status_change_callback: " + response.status);
@@ -27,7 +27,6 @@ stagegage.controller('SplashController', function ($scope) {
       // Log this shit (send UID to service)
       var uid = response.authResponse.userID;
       console.log('userID = ' + uid);
-      var accessToken = response.authResponse.accessToken;
     } else {
       console.log('Unauthorized user detected');
       $scope.$apply(function () {

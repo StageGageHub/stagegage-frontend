@@ -77,7 +77,7 @@ stagegage.controller('RankingsController', function ($scope, $location) {
   $scope.festivals = [
   	'ultra music festival',
   	'outside lands',
-  	'coachella',
+  	'coachella'
   ];
 
   $scope.genres = [
@@ -86,7 +86,7 @@ stagegage.controller('RankingsController', function ($scope, $location) {
   	'hip hop',
   	'electronic',
   	'rap',
-  	'country',
+  	'country'
   ];
 
   $scope.filteredGenres = [''];

@@ -39,7 +39,7 @@ stagegage.controller('HomeController', function ($scope) {
   $scope.festivals = [
     'ultra music festival',
     'outside lands',
-    'coachella',
+    'coachella'
   ];
 
   $scope.toRank = {
