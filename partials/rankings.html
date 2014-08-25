@@ -1,0 +1,36 @@
+<div class="title_container">
+    <p class="title">THE FULL RANKINGS</p>
+    <p class="quote">ALBUMS. SOLO. GENRE. FAME. NONE OF IT MATTERS. STAGEGAGE BRINGS YOU THE ARTISTS YOU LOVE TO SEE LIVE.</p>
+</div>
+<div class="filters_container">
+    <p class="text">FILTER ARTISTS BY:</p>
+    <div class="festival_filter">
+    <p class="text">FESTIVAL</p>
+    <form action="" class="festival_picker">
+    <select id="festivalFilterSelector" name="festivals_options" class="festival_select" ng-model="festivalSelection">
+        <!-- don't forget the blank option -->
+        <option></option>
+        <option class="festival_option" ng-repeat="festival in festivals">{{ festival }}</option>
+    </select>
+    </form>
+</div>
+    <div class="genre_filter" ng-model="filteredGenres">
+        <p class="text">GENRE</p>
+        <div class="genre_container">
+            <button  ng-repeat="genre in filteredGenres" ng-click='removeFromFilteredGenres(genre)' class='genre_view'>
+                <p>{{genre}}</p>
+            </button>
+        </div>
+    </div>
+</div>
+<ul class="rankings_container">
+    <li class="rank" ng-repeat="rank in (filteredRanks = (ranks | filter:festivalSelection | filterByGenre:filteredGenres ))">
+        <p class="rank_number">{{ filteredRanks.indexOf(rank) + 1 }}</p>
+        <p class="artist_name">{{ rank.name }}</p>
+        <div class="genre_container">
+            <button  ng-repeat="genre in rank.genres" ng-click='addToFilteredGenres(genre)' class="genre_view">
+                <p>{{genre}}</p>
+            </button>
+        </div>
+    </li>
+</ul>

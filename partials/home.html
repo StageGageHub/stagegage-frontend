@@ -1,0 +1,43 @@
+<p class="title">STAGEGAGE</p>
+<p class="quote">"RANKING THE BEST LIVE ARTISTS RIGHT NOW"</p>
+<div class="next_fesitval_tile clearfix">
+    <p class="text">{{ highlight.title }}</p>
+    <div class="highligh_content_container">
+        <img src="{{ highlight.img }}" class="next_festival_img"/>
+        <div class="list_container">
+            <p class="list_title">TOP 5</p>
+            <ul class = "ranks">
+                <li ng-repeat="rank in highlight.ranks | limitTo: 5">
+                    {{highlight.ranks.indexOf(rank) + 1}}. {{rank.name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="center_tile">
+    <p class="box_text">WHO SHOULD I SEE?</p>
+    <p class="prompt">WHICH FESTIVAL ARE YOU ATTENDING?</p>
+    <form ng-submit="go('/rankings/festival/' + futureFestivalRank.name)">
+        <input class="festival_input" type="text" list="futureFestivals" ng-model="futureFestivalRank.name">
+    </form>
+    <datalist id="futureFestivals" class="festival_list_suggestion">
+        <option ng-repeat="festival in festivals" value="{{ festival }}"></option>
+    </datalist>
+</div>
+<div class="festival_select_tile clearfix">
+    <p class="text" >RANK YOUR FESTIVAL EXPERIENCE</p>
+    <p class="prompt">WHICH FESTIVAL DID YOU ATTEND?</p>
+    <form ng-submit="redirectToCreateRank(toRank.name)">
+        <input class="festival_input" type="text" list="pastFestivals" ng-model="toRank.name"/>
+    </form>
+    <datalist id="pastFestivals" class="festival_list_suggestion">
+        <option ng-repeat="festival in festivals" value="{{ festival }}"></option>
+    </datalist>
+</div>
+<div class="full_rank_tile clearfix">
+    <p class="text">CHECK OUT THE BEST LIVE ARTISTS RIGHT NOW</p>
+    <button onClick="window.location='rankings.html';" class="_button">
+        <p>THE FULL</p>
+        <p>RANKINGS</p>
+    </button>
+</div>

@@ -306,47 +306,47 @@ body {
   border-radius: 4px;
 }
 
-._button {
-  display: block;
-  float: left;
-  border-radius: 3px;
-  text-align: center;
-}
+/*._button {*/
+  /*display: block;*/
+  /*float: left;*/
+  /*border-radius: 3px;*/
+  /*text-align: center;*/
+/*}*/
 
-.menu ._button {
-  position: relative;
-  width: 12%;
-  height: 50px;
-  margin-top: -50px;
-  border-bottom: 1px solid rgb(0, 255, 209);
-  font-size: 1em;
-  line-height: 1.38;
-  color: rgb(54, 61, 63);
-  -webkit-transition: .1s ease;
-  -moz-transition: .1s ease;
-  -o-transition: .1s ease;
-  -ms-transition: .1s ease;
-  transition: .1s ease;
-}
+/*.menu ._button {*/
+  /*position: relative;*/
+  /*width: 12%;*/
+  /*height: 50px;*/
+  /*margin-top: -50px;*/
+  /*border-bottom: 1px solid rgb(0, 255, 209);*/
+  /*font-size: 1em;*/
+  /*line-height: 1.38;*/
+  /*color: rgb(54, 61, 63);*/
+  /*-webkit-transition: .1s ease;*/
+  /*-moz-transition: .1s ease;*/
+  /*-o-transition: .1s ease;*/
+  /*-ms-transition: .1s ease;*/
+  /*transition: .1s ease;*/
+/*}*/
 
-.menu ._button:hover {
-  border-bottom-width: 7px;
-}
+/*.menu ._button:hover {*/
+  /*border-bottom-width: 7px;*/
+/*}*/
 
-.menu .home-button {
-  z-index: 12;
-  margin-left: 10%;
-}
+/*.menu .home-button {*/
+  /*z-index: 12;*/
+  /*margin-left: 10%;*/
+/*}*/
 
-.menu .rankings-button {
-  z-index: 13;
-  margin-left: 23.59896%;
-}
+/*.menu .rankings-button {*/
+  /*z-index: 13;*/
+  /*margin-left: 23.59896%;*/
+/*}*/
 
-.menu .about-us-button {
-  z-index: 14;
-  margin-left: 37.1992199999%;
-}
+/*.menu .about-us-button {*/
+  /*z-index: 14;*/
+  /*margin-left: 37.1992199999%;*/
+/*}*/
 
 .footer {
   position: relative;

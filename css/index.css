@@ -11,6 +11,7 @@ body {
 }
 
 .menu_bg {
+    display:block !important;
   position: relative;
   float: left;
   z-index: 11;
@@ -22,6 +23,7 @@ body {
 }
 
 .menu {
+  display: block !important;
   position: fixed;
   top: 0;
   left: 0.0833333333%;

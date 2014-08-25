@@ -1,4 +1,6 @@
-stagegage.controller('AuthController', function ($scope) {
+var authControllers = angular.module('AuthControllers', []);
+
+authControllers.controller('AuthController', function ($scope) {
   console.log('temporarily unauthorizing user');
   $scope.isAuthorized = false;
   window.fbAsyncInit = function onFBLoad() {

@@ -4,12 +4,12 @@
 }
 
 body {
-  background-color: #252525;
+  /*background-color: #252525;*/
   font: 300 1.25em/1.38 pacifica;
   color: rgb(0, 0, 0);
 }
 
-#title {
+#splash-title {
   position: relative;
   float: left;
   width: 100%;
@@ -20,7 +20,7 @@ body {
   color: #ffffff;
 }
 
-#quote {
+#splash-quote {
   position: relative;
   float: left;
   z-index: 9;
