@@ -11,4 +11,9 @@ splashControllers.controller('SplashController', function ($document, $scope, $r
         $rootScope.hideFooter = false;
         $document[0].body.style.backgroundColor = '#F4F4F4';
     });
+
+    $scope.go = function (path) {
+        console.log('Going to ' + path);
+        $location.path( path );
+    };
 });
