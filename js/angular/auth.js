@@ -17,6 +17,7 @@ authControllers.controller('AuthController', function ($scope) {
 
     FB.getLoginStatus(function(response) {
       var authOverlay = document.getElementById('auth-overlay');
+//      var authOverlay = $scope.authOverlay;
       if (response.status === 'connected') {
         console.log('Authenticated user detected');
         authOverlay.style.width = 0;
