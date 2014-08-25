@@ -1,8 +1,8 @@
 var authControllers = angular.module('AuthControllers', []);
 
-authControllers.controller('AuthController', function ($scope) {
+authControllers.controller('AuthController', function ($scope, $rootScope) {
   console.log('temporarily unauthorizing user');
-  $scope.isAuthorized = false;
+  $rootScope.isAuthorized = false;
   window.fbAsyncInit = function onFBLoad() {
     console.log('initializing FB');
     FB.init({
@@ -62,7 +62,7 @@ authControllers.controller('AuthController', function ($scope) {
           authOverlay.style.height = 0;
           authOverlay.style.display = 'none';
         }
-        $scope.isAuthorized = true;
+        $rootScope.isAuthorized = true;
       });
       // Log this shit (send UID to service)
       var uid = response.authResponse.userID;
@@ -76,7 +76,7 @@ authControllers.controller('AuthController', function ($scope) {
           authOverlay.style.height = 100;
           authOverlay.style.display = 'inline';
         }
-        $scope.isAuthorized = false;
+        $rootScope.isAuthorized = false;
       });
     }
   }
