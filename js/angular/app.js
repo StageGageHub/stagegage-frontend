@@ -31,7 +31,7 @@ stagegage.config(['$routeProvider',
                 controller: ''
             })
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/splash'
             });
     }
 ]);
