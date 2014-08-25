@@ -1,6 +1,6 @@
 var splashControllers = angular.module('SplashControllers', []);
 
-splashControllers.controller('SplashController', function ($document, $scope, $rootScope) {
+splashControllers.controller('SplashController', function ($scope, $rootScope, $document, $location) {
     console.log("hiding menu, overlay, and footer");
     // Here we hide menu and footer for this view :-(
     $rootScope.hideMenu = true;
