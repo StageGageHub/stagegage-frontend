@@ -1,0 +1,92 @@
+#create-title {
+    margin-bottom: 10px;
+}
+
+#festival-input-tile {
+    position: relative;
+    float: left;
+    z-index: 8;
+    width: 85%;
+    height: auto;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    border: 1px solid rgb(0, 255, 209);
+    background-color: rgb(255, 255, 255);
+}
+
+#festival-input-tile #input-container {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#festival-input-tile #input-container #festival-input {
+    min-width: 20px;
+    border: 10px solid rgb(0, 255, 209);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#festival-input-tile #input-container #festival-input:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+#festival-input-tile #input-container #festival-input:focus {
+    border: 10px solid rgb(0, 255, 252);
+}
+
+#festival-input-tile #input-container #prompt {
+    text-align: left;
+    padding-left: 38%;
+}
+
+#festival-input-tile #input-container #filter-container {
+    width: 100%;
+}
+
+#festival-input-tile #input-container #filter-container #show-filter {
+    font-size: .75em;
+    float: left;
+    padding-left: 10px;
+    margin-left: 10px;
+    min-width: 20px;
+    border: 1px solid rgb(0, 255, 209);
+}
+
+
+#festival-input-tile #show-container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.show {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.show:hover {
+    background-color: rgba(114, 255, 194, 0.44);
+}
+
+.selected-show {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(114, 255, 194, 1);
+}
+
+#festival-input-tile #next-button {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid rgb(0, 255, 209);
+    margin-left: 48%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#festival-input-tile #next-button:hover {
+    background-color: #e3ece5;
+}

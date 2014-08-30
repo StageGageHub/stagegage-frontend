@@ -1,0 +1,26 @@
+<a id="create-title" class="title">STAGEGAGE</a>
+
+<div id="festival-input-tile">
+    <div id="input-container">
+        <form ng-submit="updateFestival(festivalToRank)">
+            <a>I ATTENDED</a>
+            <input id="festival-input" list="pastFestivals" ng-model="festivalToRank" ng-change="checkFestival(festivalToRank)" autosize placeholder=" "/>
+        </form>
+        <datalist id="pastFestivals" class="festival_list_suggestion">
+            <option ng-repeat="festival in festivals" value="{{ festival }}"></option>
+        </datalist>
+        <a id="prompt">AND SAW</a>
+        <div id="filter-container">
+            <form>
+                <input id="show-filter" ng-model="showFilter" ng-change="checkFestival(festivalToRank)" autosize placeholder="Filter Shows"/>
+            </form>
+        </div>
+    </div>
+    <div id="show-container">
+        <button  ng-repeat="show in activeFestival.shows | filter: showFilter" ng-click='toggleSeenState(show)' ng-class="getShowStyle(show)">
+            <a>{{show}}</a>
+        </button>
+    </div>
+    <button ng-click="go('/create-rank/rank/festival/' + activeFestival.name)" ng-show="canGoNext" id="next-button">NEXT</button>
+</div>
+
