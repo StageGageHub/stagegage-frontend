@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="css/create-rank-select-shows.css">
+
 <a id="create-title" class="title">STAGEGAGE</a>
 
 <div id="festival-input-tile">
     <div id="input-container">
-        <form ng-submit="updateFestival(festivalToRank)">
+        <form ng-submit="updateFestival(festivalToRank)" ng-controller="TextBoxController">
             <a>I ATTENDED</a>
             <input id="festival-input" list="pastFestivals" ng-model="festivalToRank" ng-change="checkFestival(festivalToRank)" autosize placeholder=" "/>
         </form>

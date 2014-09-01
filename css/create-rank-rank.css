@@ -1,0 +1,116 @@
+#create-prompt {
+    font-size: 1.3em;
+}
+
+#floating-instructions {
+    position: fixed;
+    float: left;
+    z-index: 10;
+    width: 310px;
+    height: 450px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid rgb(0, 255, 209);
+    background-color: #3C3C3C;
+}
+
+.instructional-title {
+    font-size: 1.5em;
+    color: rgb(0, 255, 209);
+    text-align: center;
+}
+
+.instructional-text {
+    color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.instructional-bullet {
+    color: #ffffff;
+    margin-left: 50px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+#rank-container {
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px;
+    width: 75%;
+    background-color: rgb(217, 217, 217);
+}
+
+#rank-container .creational-rank {
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    border: 1px solid rgb(0, 255, 209);
+}
+
+#rank-container .creational-rank .rank-number {
+    float: left;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 1.4em;
+    width: 40px;
+    height: 58px;
+    margin-right: 1px;
+    line-height: 2.0;
+    border-right: 1px solid rgb(0, 255, 209);
+    background-color: #e3ece5;
+}
+
+#rank-container .creational-rank .rank-show {
+    float: left;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    font-size: 1.4em;
+    width: 30%;
+    height: 60px;
+    line-height: 2.0;
+    border-right: 1px solid rgb(0, 255, 209);
+}
+
+.rank-input {
+    font-size: 1.2em;
+    text-align: center;
+    float: left;
+    position: relative;
+    margin-top: 11px;
+    margin-left: 15px;
+    border: 4px solid rgba(0, 221, 255, 0.43);
+    width: 64%;
+}
+
+#rank-genre-container {
+    width: 20%;
+}
+
+#rank-instructions {
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 2.0;
+    margin-bottom: -20px;
+    color: #b4bab5;
+}
+
+#next-button {
+    padding-right: 100px;
+    padding-left: 100px;
+    font-size: 4em;
+    text-align: center;
+    border: 5px solid rgb(0, 255, 209);
+    margin-left: 35%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#next-button:hover {
+    background-color: #e3ece5;
+}

@@ -1,1 +1,36 @@
-<a id="create-title" class="title">STAGEGAGE</a>
+<link rel="stylesheet" href="css/create-rank-rank.css"/>
+
+<div class="title_container">
+    <a class="title">STAGEGAGE</a>
+    <p id="create-prompt" class="quote">NOW RANK THE LIVE SHOWS YOU SAW AT {{ getActiveFestivalName() }}</p>
+</div>
+<p id="rank-instructions">Just click and drag the shows below to create your rank</p>
+<div id="floating-instructions">
+    <br>
+    <p class="instructional-title">HOW TO RANK</p>
+    <p class="instructional-text">Rank based on the quality of performance that you saw</p>
+    <br>
+    <br>
+    <p class="instructional-title">Factors to consider</p>
+    <p class="instructional-bullet">-Music Quality</p>
+    <p class="instructional-bullet">-Showmanship</p>
+    <p class="instructional-bullet">-Crowd Engagement</p>
+    <p class="instructional-bullet">-Range</p>
+    <p class="instructional-bullet">-Fun</p>
+    <p class="instructional-bullet">-Intangibles</p>
+</div>
+<ul id="rank-container" ui-sortable ng-model="rankList">
+    <li class="creational-rank" ng-repeat="show in rankList">
+        <p class="rank-number">{{ $index + 1 }}</p>
+        <p class="rank-show">{{ show }}</p>
+        <form>
+            <input class="rank-input" placeholder="How was it?" maxlength="140">
+        </form>
+    </li>
+</ul>
+
+
+<button id="next-button" ng-click="">
+    ALL DONE
+</button>
+

@@ -1,3 +1,4 @@
+
 <p class="title">STAGEGAGE</p>
 <p class="quote">"RANKING THE BEST LIVE ARTISTS RIGHT NOW"</p>
 <div class="next_fesitval_tile clearfix">
@@ -27,7 +28,7 @@
 <div class="festival_select_tile clearfix">
     <p class="text" >RANK YOUR FESTIVAL EXPERIENCE</p>
     <p class="prompt">WHICH FESTIVAL DID YOU ATTEND?</p>
-    <form ng-submit="redirectToCreateRank(toRank.name)">
+    <form ng-submit="go('/create-rank/select-shows/festival/' + toRank.name)">
         <input class="festival_input" type="text" list="pastFestivals" ng-model="toRank.name"/>
     </form>
     <datalist id="pastFestivals" class="festival_list_suggestion">
