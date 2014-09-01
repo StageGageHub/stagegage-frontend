@@ -1,7 +1,7 @@
 var createRankRank = angular.module('CreateRankRankControllers', []);
 
 createRankRank.controller('CreateRankRankController', function ($scope, $rootScope, $routeParams, $location, $window, seenShows) {
-    var festivalName = $routeParams.festivalName;
+    $scope.festivalName = $routeParams.festivalName;
     $scope.rankList = seenShows.get();
 
     $scope.go = function (path) {
